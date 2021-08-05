@@ -1,0 +1,163 @@
+$text: (1, 2, 3, 4, 5);
+@each $name,
+$glyph in $text {
+    .text-#{$name} {
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        margin-top: 10px*2;
+    }
+}
+
+
+/*Colores*/
+
+$body: black;
+$container: white;
+$footerBg: white;
+$textcolorgeneral: white;
+
+/*colores*/
+
+body {
+    background-color: $body;
+}
+
+.container {
+    color: $container;
+}
+
+.footerBg {
+    background-color: $footerBg;
+}
+
+.encabezado--color {
+    color: $textcolorgeneral;
+}
+
+.subtitulo--color {
+    color: $textcolorgeneral;
+}
+
+.section__textocontacto--color {
+    color: $textcolorgeneral;
+}
+
+.section-error {
+    background-color: white;
+    text-align: center;
+}
+
+.section-error-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*Flex Box*/
+
+.footer__redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 120px;
+}
+
+.section__nosotrosimg--flex1 {
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.section__nosotrosimg--flex2 {
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.section__texto--flex {
+    margin: 25px;
+}
+
+.section__mayoristasimg--flex {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.section__img--flex {
+    margin-top: 1px;
+    margin: 110px;
+}
+
+
+/*Fin Flex Box*/
+
+
+/*Textos*/
+
+$subtitulo: 40px;
+$font_navbar-brand: 50px;
+$paddingTB: 50px;
+$container-fluid: 0;
+$footerBgh3: center;
+.subtitulo--fontsize {
+    font-size: $subtitulo;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.navbar-brand {
+    font-size: $font_navbar-brand;
+}
+
+.paddingTB {
+    padding-top: $paddingTB;
+    padding-bottom: $paddingTB;
+}
+
+.container-fluid {
+    padding-left: $container-fluid;
+    padding-right: $container-fluid;
+}
+
+.footerBg h3 {
+    text-align: $footerBgh3;
+}
+
+
+/*Fin Textos*/
+
+
+/*MediaQuery*/
+
+$font-h1:40px;
+$font-li:18px;
+$font-h3:32px;
+
+/* vista desktop */
+
+@media only screen and (min-width: 1024px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
+}
+
+
+/* vista mobile */
+
+@media only screen and (max-width: 767px) {
+    p,
+    span,
+    li {
+        font-size: $font-li;
+    }
+    h1 {
+        font-size: $font-h1;
+    }
+    h3 {
+        font-size: $font-h3;
+    }
+}
+
+
+/*Fin MediaQuery*/
